@@ -1,0 +1,1342 @@
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+@media (min-width: 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+.b-example-divider {
+	height: 3rem;
+	background-color: rgba(0, 0, 0, .1);
+	border: solid rgba(0, 0, 0, .15);
+	border-width: 1px 0;
+	box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.slide {
+	border-radius: 8px;
+	height: 150px;
+	width: 400px;
+}
+
+.b-example-vr {
+	flex-shrink: 0;
+	width: 1.5rem;
+	height: 100vh;
+}
+
+.bi {
+	vertical-align: -.125em;
+	fill: currentColor;
+}
+
+.nav-scroller {
+	position: relative;
+	z-index: 2;
+	height: 2.75rem;
+	overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+	display: flex;
+	flex-wrap: nowrap;
+	padding-bottom: 1rem;
+	margin-top: -1px;
+	overflow-x: auto;
+	text-align: center;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+.ui-helper-hidden {
+	display: none;
+}
+
+.ui-helper-hidden-accessible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.ui-helper-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+}
+
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+	content: "";
+	display: table;
+	border-collapse: collapse;
+}
+
+.ui-helper-clearfix:after {
+	clear: both;
+}
+
+.ui-helper-zfix {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	filter: Alpha(Opacity=0);
+	/* support: IE8 */
+}
+
+.ui-front {
+	z-index: 100;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+	cursor: default !important;
+	pointer-events: none;
+}
+
+
+/* Icons
+----------------------------------*/
+.ui-icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -.25em;
+	position: relative;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.ui-widget-icon-block {
+	left: 50%;
+	margin-left: -8px;
+	display: block;
+}
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.ui-resizable {
+	position: relative;
+}
+
+.ui-resizable-handle {
+	position: absolute;
+	font-size: 0.1px;
+	display: block;
+	touch-action: none;
+}
+
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+	display: none;
+}
+
+.ui-resizable-n {
+	cursor: n-resize;
+	height: 7px;
+	width: 100%;
+	top: -5px;
+	left: 0;
+}
+
+.ui-resizable-s {
+	cursor: s-resize;
+	height: 7px;
+	width: 100%;
+	bottom: -5px;
+	left: 0;
+}
+
+.ui-resizable-e {
+	cursor: e-resize;
+	width: 7px;
+	right: -5px;
+	top: 0;
+	height: 100%;
+}
+
+.ui-resizable-w {
+	cursor: w-resize;
+	width: 7px;
+	left: -5px;
+	top: 0;
+	height: 100%;
+}
+
+.ui-resizable-se {
+	cursor: se-resize;
+	width: 12px;
+	height: 12px;
+	right: 1px;
+	bottom: 1px;
+}
+
+.ui-resizable-sw {
+	cursor: sw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	bottom: -5px;
+}
+
+.ui-resizable-nw {
+	cursor: nw-resize;
+	width: 9px;
+	height: 9px;
+	left: -5px;
+	top: -5px;
+}
+
+.ui-resizable-ne {
+	cursor: ne-resize;
+	width: 9px;
+	height: 9px;
+	right: -5px;
+	top: -5px;
+}
+
+
+.ui-selectable {
+	touch-action: none;
+}
+
+.ui-selectable-helper {
+	position: absolute;
+	z-index: 100;
+	border: 1px dotted black;
+}
+
+
+.ui-accordion .ui-accordion-header {
+	display: block;
+	cursor: pointer;
+	position: relative;
+	margin: 2px 0 0 0;
+	padding: .5em .5em .5em .7em;
+	font-size: 100%;
+}
+
+.ui-accordion .ui-accordion-content {
+	padding: 1em 2.2em;
+	border-top: 0;
+	overflow: auto;
+}
+
+
+
+.ui-sortable-handle {
+	touch-action: none;
+}
+
+
+
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+}
+
+
+.ui-button {
+	padding: .4em 1em;
+	display: inline-block;
+	position: relative;
+	line-height: normal;
+	margin-right: .1em;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* Support: IE <= 11 */
+	overflow: visible;
+}
+
+.ui-button,
+.ui-button:link,
+.ui-button:visited,
+.ui-button:hover,
+.ui-button:active {
+	text-decoration: none;
+}
+
+/* to make room for the icon, a width needs to be set here */
+.ui-button-icon-only {
+	width: 2em;
+	box-sizing: border-box;
+	text-indent: -9999px;
+	white-space: nowrap;
+}
+
+/* no icon support for input elements */
+input.ui-button.ui-button-icon-only {
+	text-indent: 0;
+}
+
+/* button icon element(s) */
+.ui-button-icon-only .ui-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -8px;
+	margin-left: -8px;
+}
+
+.ui-button.ui-icon-notext .ui-icon {
+	padding: 0;
+	width: 2.1em;
+	height: 2.1em;
+	text-indent: -9999px;
+	white-space: nowrap;
+
+}
+
+input.ui-button.ui-icon-notext .ui-icon {
+	width: auto;
+	height: auto;
+	text-indent: 0;
+	white-space: normal;
+	padding: .4em 1em;
+}
+
+/* workarounds */
+/* Support: Firefox 5 - 40 */
+input.ui-button::-moz-focus-inner,
+button.ui-button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+
+.ui-checkboxradio-label .ui-icon-background {
+	box-shadow: inset 1px 1px 1px #ccc;
+	border-radius: .12em;
+	border: none;
+}
+
+.ui-checkboxradio-radio-label .ui-icon-background {
+	width: 16px;
+	height: 16px;
+	border-radius: 1em;
+	overflow: visible;
+	border: none;
+}
+
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+	background-image: none;
+	width: 8px;
+	height: 8px;
+	border-width: 4px;
+	border-style: solid;
+}
+
+.ui-checkboxradio-disabled {
+	pointer-events: none;
+}
+
+
+.ui-controlgroup {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.ui-controlgroup>.ui-controlgroup-item {
+	float: left;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.ui-controlgroup>.ui-controlgroup-item:focus,
+.ui-controlgroup>.ui-controlgroup-item.ui-visual-focus {
+	z-index: 9999;
+}
+
+.ui-controlgroup-vertical>.ui-controlgroup-item {
+	display: block;
+	float: none;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: left;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-item {
+	box-sizing: border-box;
+}
+
+.ui-controlgroup .ui-controlgroup-label {
+	padding: .4em 1em;
+}
+
+.ui-controlgroup .ui-controlgroup-label span {
+	font-size: 80%;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-label+.ui-controlgroup-item {
+	border-left: none;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-label+.ui-controlgroup-item {
+	border-top: none;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-label.ui-widget-content {
+	border-right: none;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-label.ui-widget-content {
+	border-bottom: none;
+}
+
+/* Spinner specific style fixes */
+.ui-controlgroup-vertical .ui-spinner-input {
+
+	/* Support: IE8 only, Android < 4.4 only */
+	width: 75%;
+	width: calc(100% - 2.4em);
+}
+
+.ui-controlgroup-vertical .ui-spinner .ui-spinner-up {
+	border-top-style: solid;
+}
+
+.rounded-circle1 {
+	margin-left: 7%;
+	height: 40px;
+	width: 40px;
+	margin-bottom: 3%;
+	border-radius: 50%;
+	/* Làm cho hình ảnh trở nên tròn */
+
+}
+
+.method {
+	background-color: #fff;
+	padding: 20px;
+}
+
+.form-control {
+	line-height: 1.5rem;
+}
+
+.avatar1 {
+
+	border-radius: 50% !important;
+	margin: 10px 10px;
+	height: 50px;
+	width: 50px;
+}
+
+.table tr td {
+	vertical-align: middle;
+}
+
+.error-message {
+	color: red;
+	margin-left: 3px;
+	margin-bottom: 5px;
+}
+
+.error {
+	color: red;
+}
+.success{
+	color: green;
+}
+
+.form-label {
+	color: black;
+}
+
+/* Custom md styles */
+.md {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1050;
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	outline: 0
+}
+
+.md.show {
+	display: block;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.md-dialog {
+	margin: 15% 0 0 35%;
+	position: relative;
+	width: auto;
+	pointer-events: none;
+	max-width: 600px;
+	/* Adjust as needed */
+}
+
+.md-dialog-centered {
+	min-height: calc(100% - 1rem);
+	display: flex;
+	align-items: center;
+}
+
+.md-content {
+	margin-left: 20%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	pointer-events: auto;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 0.3rem;
+	outline: 0;
+}
+
+.md-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1rem;
+	border-bottom: 1px solid #dee2e6;
+	border-top-left-radius: 0.3rem;
+	border-top-right-radius: 0.3rem;
+}
+
+.md-title {
+	margin-bottom: 0;
+	line-height: 1.5;
+}
+
+.md-body {
+	position: relative;
+	flex: 1 1 auto;
+	padding: 1rem;
+}
+
+.md-footer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 0.75rem;
+	border-top: 1px solid #dee2e6;
+	border-bottom-right-radius: 0.3rem;
+	border-bottom-left-radius: 0.3rem;
+}
+
+.md .btn-close {
+	padding: 0.5rem;
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+}
+
+.fas.fa-save {
+	font-size: 30px;
+	margin-right: 10px;
+}
+
+.mb-12.mb-md-4 {
+	min-height: 680px;
+	background-color: white;
+	padding: 25px;
+}
+
+#tb-ds-product {
+	max-width: 80%;
+}
+
+.product-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+
+.product-columns {
+	display: flex;
+	gap: 20px;
+}
+
+.left-column {
+	flex: 1;
+}
+
+.right-column {
+	flex: 1;
+}
+
+.info-label {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.image-gallery {
+	display: inline-block;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+.name_color_product_detail{
+	min-width: 50px;
+}
+.product-image {
+	max-width: 125px;
+	max-height: 140px;
+	object-fit: cover;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+
+
+.info-item {
+	margin-bottom: 10px;
+}
+
+
+.info-detail b {
+	font-size: 20px;
+}
+
+.info-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.info-li {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.info-p {
+
+	width: 120px;
+	margin: 0;
+}
+
+.info-value {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#p-roles {
+	display: -webkit-inline-box;
+}
+
+#select-roles {
+	margin-top: -10px;
+}
+
+.pagination-nav {
+	text-align: center;
+}
+
+
+.product-image {
+	width: 80px;
+	height: 100px;
+	border-radius: 5px;
+	object-fit: cover;
+	margin-right: 10px;
+}
+
+.product-name {
+	font-size: 1em;
+	color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Thiết lập các thuộc tính chung cho thẻ span có class "thong_ke" */
+.thong_ke {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+/* Thiết lập bố cục cho container của mỗi phần thống kê */
+.count_container {
+	flex: 1;
+	margin: 10px;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.count_container:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Thiết lập icon */
+.count_container span[data-feather] {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 15px;
+	color: #007bff;
+	display: block;
+	font-size: 30px;
+}
+
+/* Thiết lập tiêu đề */
+.count_container h5,
+.count_container span {
+	font-weight: bold;
+	/* Đậm */
+	color: #fff;
+}
+
+
+
+/* Thiết lập nền và văn bản của phần sản phẩm bán chạy */
+
+
+.sp_top {
+	background-color: #ea6976;
+}
+
+.count_sp {
+	/* Phần số lượng sản phẩm */
+	background-color: #dfbd58;
+	/* Màu vàng */
+}
+
+.count_hd {
+	/* Phần số lượng hóa đơn */
+	background-color: #49d069;
+	/* Màu xanh lá */
+}
+
+.count_nd {
+	/* Phần số lượng người dùng */
+	background-color: #4496ee;
+	/* Màu xanh dương */
+}
+
+
+
+
+#pieChart {
+	max-height: 400px;
+	max-width: 500px;
+	/* Đảm bảo canvas không vượt quá kích thước của phần tử cha */
+	height: auto;
+	/* Đảm bảo tỷ lệ chiều cao được duy trì */
+	display: block;
+	/* Loại bỏ khoảng trắng dưới canvas */
+}
+
+
+
+.form-container {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+	align-items: center;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.form-group label {
+	margin-bottom: 5px;
+
+}
+
+.form-group select {
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+button#checkDate {
+	padding: 4px 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button#checkDate:hover {
+	background-color: #0056b3;
+}
+
+.chart-container {
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+.invoice-details {
+
+	padding: 45px;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-details h3 {
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+#invoiceList>div {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+#invoiceList>div>div {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+
+
+.profile {
+
+	
+	margin: auto;
+	padding: 20px;
+
+	border-radius: 10px;
+	
+}
+
+
+
+.profile img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	object-fit: cover;
+	
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.info-name,.info-email,.info-phone,.info-address,.info-username{
+    width: 600px;
+    margin-bottom: 5px;
+    padding: 30px 0px 0px 10px;
+    border-bottom: 1px solid #000;
+    font-weight: 600;
+}
+#info-cn{
+    border: none;
+    width: 70%;
+}
+#info-cn:focus{
+    outline: none;
+}
+
+#icon-fa-edit{
+	margin-top:5px;
+	float: right;
+	
+}
+
+#info-save-cn {
+	margin-left: 140px;
+}
+
+
+
+.error-message-tt {
+	color: red;
+	font-size: 14px;
+}
+
+#orderChart {
+	max-height: 500px;
+}
+
+#img-color-product {
+	height: 200px;
+	width: 150px;
+	border-radius: 15px;
+}
+
+.custom-file-upload {
+	display: inline-block;
+	padding: 6px 12px;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #f8f9fa;
+}
+
+
+.btn-sm {
+	margin-right: 5px;
+}
+#tavle-color-product{
+	max-width: 500px;
+}
+.add_color_capacity{
+	padding: 10px 15px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background-color: #cdd1cd;
+}
+.product_plus{
+	text-align: center;
+}
+#pr-color-capacity{
+	margin-left: 26%;
+	width: 60%;
+}
+#info-save-repassword{
+	margin-left: 7px;
+}
+#capacity-unit{
+	
+	padding: 10px;
+	
+}
+.edit-form {
+   /* background: rgba(255, 255, 255, 0.8); */
+    padding: 10px;
+    z-index: 1;
+    /* border: 1px solid #ddd; */
+    width: 160px; /* Same width as img-thumbnail */
+}
+
+#task{
+	min-width: 170px;
+}
+.chuc-nang-invoice{
+	width: 150px;
+}
+
+.status{
+	text-align: center;
+	width: 180px;
+}
+
+
+.status-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.status-bar {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.status-step {
+    flex: 1;
+    text-align: center;
+    padding: 10px 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.status-step.active {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.status-step.active::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.status-step:first-child::before {
+    display: none;
+}
+
+.status-step:last-child::after {
+    display: none;
+}
+
+.invoice-items {
+    margin-top: 20px;
+}
+
+.invoice-items table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.invoice-items th, .invoice-items td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.invoice-items th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+#td-status{
+	text-align: center;
+}
+#month-year-statis{
+	display: ruby;
+	float: right;
+}
+#thong-ke, #Export{
+	margin-top: -2px;
+	padding: 4px 10px;
+}
+
+.statistics-day {
+	
+    background-color: #f8f9fa; /* Màu nền nhạt */
+    padding: 15px; /* Khoảng cách bên trong */
+    border: 1px solid #ddd; /* Đường viền nhạt */
+    border-radius: 5px; /* Bo góc */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+  
+    gap: 20px;
+    font-family: 'Arial', sans-serif; /* Font chữ */
+    color: #333; /* Màu chữ */
+}
+
+/* Định dạng cho từng mục */
+.statistics-day .stat-item {
+    flex: 1;
+    
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Căn đều 2 đầu */
+}
+
+/* Định dạng cho các phần tử strong */
+.statistics-day strong {
+    font-size: 18px; /* Kích thước chữ */
+    color: #007bff; /* Màu chữ */
+}
+
+/* Định dạng khi di chuột qua */
+.statistics-day strong:hover {
+    color: #0056b3; /* Màu chữ khi di chuột qua */
+}
+.doanh_thu{
+	display: flex;
+}
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 576px) {
+    .statistics-day {
+		
+        flex-direction: column;
+    }
+    .statistics-day .stat-item {
+        justify-content: center; /* Căn giữa theo chiều ngang */
+    }
+}
+
+
+/* Định dạng tổng thể cho option-m-y */
+.option-m-y {
+    background-color: #f8f9fa; /* Màu nền nhạt */
+    padding: 20px; /* Khoảng cách bên trong */
+    border: 1px solid #ddd; /* Đường viền nhạt */
+    border-radius: 5px; /* Bo góc */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family: 'Arial', sans-serif; /* Font chữ */
+    color: #333; /* Màu chữ */
+}
+
+/* Định dạng cho từng mục con */
+.option-m-y > div {
+    flex: 1 1 calc(33.333% - 20px); /* Chia đều mỗi mục trên 3 cột, trừ khoảng cách giữa chúng */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    margin: 10px 0;
+}
+
+.option-m-y label {
+    font-weight: bold;
+}
+
+.option-m-y span {
+    font-size: 16px;
+    color: #007bff; /* Màu chữ */
+}
+
+/* Định dạng cho form-group */
+.form-group {
+    flex: 1 1 100%; /* Chiếm toàn bộ chiều rộng */
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+#monthSelect, #yearSelect, #thong-ke {
+    margin: 0 10px;
+} 
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .option-m-y > div {
+        flex: 1 1 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+    }
+    
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #monthSelect, #yearSelect, #thong-ke {
+        margin: 10px 0;
+    }
+}
+#day-month-year-statis-day{
+	display: contents;
+	float: right;
+}
+#statistics-day{
+	display: block;
+}
+#yearSelect{
+	padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#monthSelect{
+	padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+/* Thiết lập đường viền và hiệu ứng */
+.custom-search-container {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+	width: 300px;;
+}
+.header-invoker {
+    position: relative;
+}
+.total-customer-main{
+	float: right;
+	margin-bottom: 20px;
+}
+.total-customer{
+	color: red;
+	
+}
+.error-invoice{
+	margin-left: 20px;
+	color: red;
+}
+.chuc-nang{
+	width: 200px;
+}
+.chuc-nang-product{
+	width: 300px;
+}
+.content-admin{
+	
+	width: 100%;
+	min-height: 100px;
+}
+.indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    
+    color: red;
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight:bold;
+}
+#logo-login{
+	margin-top: 70px;
+	width: 530px;
+	height: 200px;
+	max-width: 600px;
+	max-height: 200px;
+	border-radius: 20px;
+	margin-bottom: -40px;
+}
+.title-login{
+	margin-left: 35%;
+	font-weight: bolder;
+	color: #007bff;
+}
+#logo-password-reset{
+	width: 530px;
+	height: 200px;
+}
+.search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.comment-section {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-detail-section {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-left: 20px; /* Thụt vào để tạo hiệu ứng lồng */
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-label {
+    
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.comment-author {
+    font-weight: bolder;
+	color: black;
+    margin-bottom: 5px;
+}
+
+.comment-date {
+    font-size: 0.8em;
+    color: #5f5f5f;
+    margin-bottom: 10px;
+	float: right;
+}
+
+.comment-content, .comment-detail-content {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #555;
+    margin-bottom: 10px;
+}
+.table.product_detail{
+	max-width: 90%;
+	margin-left: 5%;
+	padding: 10px;
+}
+#md-customer-name{
+	margin-bottom: 30px;
+}
+
+.status-now{
+	width: 120px;
+}
