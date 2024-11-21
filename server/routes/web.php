@@ -7,6 +7,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CapacityColorController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\StatisticalController;
 
 Route::middleware(['auth', 'check.status'])->group(function () {
     Route::prefix('admin')->middleware('role:1')->group(function () {
@@ -73,6 +76,35 @@ Route::middleware(['auth', 'check.status'])->group(function () {
             Route::get('delete/{id}', [CapacityColorController::class, 'deleteCapacity'])->name('delete');
         });
     });
+    Route::prefix('customer')->middleware('role:1,2')->group(function () {
+        Route::name('customer.')->group(function () {
+            Route::get('search', [CustomerController::class, 'search'])->name('search');
+            Route::get('list', [CustomerController::class, 'getList'])->name('list');
+            Route::get('update/{id}', [CustomerController::class, 'upDate'])->name('update');
+            Route::put('update/{id}', [CustomerController::class, 'hdUpdate'])->name('hd-update');
+            Route::get('delete/{id}', [CustomerController::class, 'delete'])->name('delete');
+            Route::get('lock/{id}', [CustomerController::class, 'lock'])->name('lock');
+            Route::get('unlock/{id}', [CustomerController::class, 'unlock'])->name('unlock');
+            Route::get('get-invoice/{id}', [CustomerController::class, 'getInvoice'])->name('get-invoice');
+            Route::get('get-invoice-detail/{customer_id}/{id}', [CustomerController::class, 'getInvoiceDetail'])->name('get-invoice-detail');
+        });
+
+    });
+    Route::get('main', [MainController::class, 'main'])->name('main');
+    Route::get('logout', [LoginController::class, 'logOut'])->name('logout');
+    Route::get('statistical', [StatisticalController::class, 'getListYear'])->name('statistical')->middleware('role:1');
+    Route::get('statistical-day', [StatisticalController::class, 'statisticalDay'])->name('statistical-day')->middleware('role:1');
+    Route::get('statistical-month', [StatisticalController::class, 'getListMonth'])->name('statistical-month')->middleware('role:1');
+    Route::get('export-year', [StatisticalController::class, 'exportYear'])->name('export-year')->middleware('role:1');
+    Route::get('export-month', [StatisticalController::class, 'exportMonth'])->name('export-month')->middleware('role:1');
+    Route::get('statistical-month-1', [StatisticalController::class, 'statisticalMonth'])->name('statistical-month-1')->middleware('role:1');
+    Route::post('statistical-month-tr', [StatisticalController::class, 'hdstatisticalMonth'])->name('statistical-month-tr')->middleware('role:1');
+
+    Route::get('statistical-year-1', [StatisticalController::class, 'statisticalYear1'])->name('statistical-year-1')->middleware('role:1');
+    Route::get('statistical-year-tr', [StatisticalController::class, 'hdstatisticalYear'])->name('statistical-year-tr')->middleware('role:1');
+
+    Route::get('statistical-year', [StatisticalController::class, 'statisticalYear'])->name('statistical-year')->middleware('role:1');
+    Route::post('invoices/status-counts', [StatisticalController::class, 'hdstatisticalDay'])->name('statistical-counts')->middleware('role:1');
 
     // route khac
 });
