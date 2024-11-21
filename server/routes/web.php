@@ -25,4 +25,26 @@ Route::middleware(['auth', 'check.status'])->group(function () {
     });
 
     // route khac
+
+    // Product route
+    Route::prefix('product')->middleware('role:1,2')->group(function () {
+        Route::name('product.')->group(function () {
+            Route::get('search', [ProductController::class, 'search'])->name('search');
+            Route::get('list', [ProductController::class, 'getList'])->name('list');
+            Route::get('detail/{id}', [ProductController::class, 'getProductDetail'])->name('detail');
+            Route::get('add-new', [ProductController::class, 'addNew'])->name('add-new');
+            Route::post('add-new', [ProductController::class, 'hdAddNew'])->name('hd-add-new');
+            Route::get('update/{id}', [ProductController::class, 'upDate'])->name('update');
+            Route::post('update/{id}', [ProductController::class, 'hdUpdate'])->name('hd-update');
+            Route::get('restore/{id}', [ProductController::class, 'restore'])->name('restore');
+            Route::get('delete/{id}', [ProductController::class, 'delete'])->name('delete');
+            Route::get('update-images/{id}', [ProductController::class, 'updateImg'])->name('update-images');
+            Route::post('update-images/{id}', [ProductController::class, 'hdUpdateImg'])->name('hd-update-images');
+            Route::delete('delete-image/{image}', [ProductController::class, 'deleteImage'])->name('delete-image');
+            Route::get('edit-image/{image}', [ProductController::class, 'editImage'])->name('edit-image');
+            Route::post('add-detail/{id}', [ProductController::class, 'addDetail'])->name('add-detail');
+            Route::delete('delete-detail/{id}', [ProductController::class, 'deleteDetail'])->name('delete-detail');
+            Route::put('update-color/{id}', [ProductController::class, 'updateImage'])->name('update-color');
+        });
+    });
 });
