@@ -63,6 +63,26 @@ class SlideShowController extends Controller
         return view('slide-show.update', compact('slide', 'dsProduct'));
     }
     //update slide
+    public function hdUpdate(Request $request, $id)
+    {
+
+        try {
+
+            $file = $request->file('img_url');
+            $slideshow = SlideShow::findOrFail($id);
+
+            if (isset($file)) {
+                Storage::delete($slideshow->img_url);
+                $path = $file->store('slide');
+                $slideshow->img_url = $path;
+            }
+            $slideshow->product_id = $request->product_id;
+            $slideshow->save();
+            return redirect()->route('slide-show.list')->with(['Success' => "Cập nhật slide {$slideshow->id} thành công!"]);
+        } catch (Exception $e) {
+            return back()->withInput()->with(['error' => "Error: " . $e->getMessage()]);
+        }
+    }
     //delete slide
     public function updateLogo(Request $request, $id)
     {
