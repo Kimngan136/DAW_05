@@ -106,6 +106,18 @@ Route::middleware(['auth', 'check.status'])->group(function () {
     Route::get('statistical-year', [StatisticalController::class, 'statisticalYear'])->name('statistical-year')->middleware('role:1');
     Route::post('invoices/status-counts', [StatisticalController::class, 'hdstatisticalDay'])->name('statistical-counts')->middleware('role:1');
 
+    Route::post('logo.update/{id}', [SlideShowController::class, 'updateLogo'])->name('logo.update');
+    Route::prefix('slide-show')->middleware('role:1,2')->group(function () {
+        Route::name('slide-show.')->group(function () {
+            Route::get('search', [SlideShowController::class, 'search'])->name('search');
+            Route::get('list', [SlideShowController::class, 'getList'])->name('list');
+            Route::get('add-new', [SlideShowController::class, 'addNew'])->name('add-new');
+            Route::post('add-new', [SlideShowController::class, 'hdAddNew'])->name('hd-add-new');
+            Route::get('update/{id}', [SlideShowController::class, 'upDate'])->name('update');
+            Route::put('update/{id}', [SlideShowController::class, 'hdUpdate'])->name('hd-update');
+            Route::get('delete/{id}', [SlideShowController::class, 'delete'])->name('delete');
+        });
+    });
     // route khac
 });
 Route::middleware('guest')->group(function () {
