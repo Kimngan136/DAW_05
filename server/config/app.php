@@ -141,7 +141,7 @@ return [
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         App\Providers\LogoServiceProvider::class,
         App\Providers\InvoiceServiceProvider::class,
-
+        Maatwebsite\Excel\ExcelServiceProvider::class,
     ])->toArray(),
 
 ];
