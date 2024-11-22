@@ -84,6 +84,18 @@ class SlideShowController extends Controller
         }
     }
     //delete slide
+    public function delete($id)
+    {
+        $slide = SlideShow::findOrFail($id);
+        if (!empty($slide->img_url)) {
+            $imgPath = $slide->img_url;
+            if (file_exists(public_path($imgPath))) {
+                unlink(public_path($imgPath));
+                $slide->delete();
+            }
+        }
+        return redirect()->route('slide-show.list')->with(['Success' => " Xóa slide thành công!"]);
+    }
     public function updateLogo(Request $request, $id)
     {
 
